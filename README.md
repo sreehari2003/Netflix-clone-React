@@ -1,5 +1,5 @@
 #NB
-There is still some problem with the api.i api is not loading propely every time if you are intersted you can do pull request
+There is still some problem with the api.ii is api is not loading propely every time if you are intersted you can do pull request
 
 
 
