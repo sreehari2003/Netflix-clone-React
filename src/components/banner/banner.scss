@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+//roboto
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.banner {
+  color: white;
+  object-fit: contain;
+  height: 448px;
+}
+.bg-dark {
+  height: 7vh;
+  width: 100%;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    #111
+  );
+  padding-top: 3.7rem;
+}
+.movie {
+  margin-left: 2rem;
+  padding-top: 12rem;
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+}
+.btn {
+  margin-top: 5px;
+  width: 9rem;
+  display: flex;
+  justify-content: space-between;
+  &_primary {
+    font-size: 16px;
+    padding: 6px 13px;
+    background-color: rgba(255, 255, 255, 0.253);
+    margin-left: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+.para {
+  padding-top: 1.5rem;
+  width: 18rem;
+  font-size: 1rem;
+}

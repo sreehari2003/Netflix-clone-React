@@ -1,0 +1,32 @@
+.body {
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+}
+.conatiner {
+  padding: 0 1.5rem;
+}
+.heading {
+  padding-top: 1rem;
+}
+.row {
+  display: flex;
+  padding: 20px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.col {
+  padding-right: 5px;
+  width: 100%;
+  background-color: black;
+  height: 20vh;
+  object-fit: contain;
+  transition: all 0.2s;
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
