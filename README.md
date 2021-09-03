@@ -1,3 +1,9 @@
+#NB
+There is still some problem with the api.i api is not loading propely every time if you are intersted you can do pull request
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
