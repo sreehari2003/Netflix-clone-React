@@ -1,7 +1,5 @@
 # NOTE
 There is still some problem with the api.ii is api is not loading propely every time if you are intersted you can do pull request
-
-# NOTE
 i havent handled the error in the code Yet
 
 
