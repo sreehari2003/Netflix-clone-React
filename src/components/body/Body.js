@@ -5,49 +5,66 @@ import { useState, useEffect } from "react";
 function Body() {
   const [orginals, setOrginals] = useState([]);
   const [trending, setTrending] = useState([]);
-  const [rated, setRated] = useState([]);
-  const [horror, setHorror] = useState([]);
+  const [romance, setRomance] = useState([]);
+  const [Comedy, setComedy] = useState([]);
+
   const POSTER_URL = "https://image.tmdb.org/t/p/original"; //base url to load images
   //fetching netflix Orginals
   useEffect(() => {
-    const getOrginals = async () => {
-      const res = await fetch(shows.fetchNetflixOriginals);
-      const ogRes = await res.json();
-      setOrginals(ogRes);
+    const fetchOoriginals = async () => {
+      try {
+        const res = await fetch(shows.fetchNetflixOriginals);
+        const data = await res.json();
+        setOrginals(data.results);
+        if (!res.ok) throw new Error();
+      } catch (err) {
+        console.log(err);
+      }
     };
-    getOrginals();
+    fetchOoriginals();
   }, []);
-  console.log(orginals);
-  //fetching netflix trending
+  //fetching trending
   useEffect(() => {
-    const getTrending = async () => {
-      const res = await fetch(shows.fetchTrending);
-      const ogRes = await res.json();
-      setTrending(ogRes);
+    const fetchTrending = async () => {
+      try {
+        const res = await fetch(shows.fetchTrending);
+        const data = await res.json();
+        setTrending(data.results);
+        if (!res.ok) throw new Error();
+      } catch (err) {
+        console.log(err);
+      }
     };
-    getTrending();
+    fetchTrending();
   }, []);
-  console.log(trending);
+  //romance
+  useEffect(() => {
+    const fetchRomance = async () => {
+      try {
+        const res = await fetch(shows.fetchRomanceMovies);
+        const data = await res.json();
+        setRomance(data.results);
+        if (!res.ok) throw new Error();
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchRomance();
+  }, []);
 
-  //   fetching top rated
+  //comdedy
   useEffect(() => {
-    const getRated = async () => {
-      const res = await fetch(shows.fetchTopRated);
-      const ogRes = await res.json();
-      setRated(ogRes);
+    const fetchComedy = async () => {
+      try {
+        const res = await fetch(shows.fetchHorrorMovies);
+        const data = await res.json();
+        setComedy(data.results);
+        if (!res.ok) throw new Error();
+      } catch (err) {
+        console.log(err);
+      }
     };
-    getRated();
-  }, []);
-  console.log(rated);
-
-  //fetching horror
-  useEffect(() => {
-    const getHorror = async () => {
-      const res = await fetch(shows.fetchHorrorMovies);
-      const ogHorror = await res.json();
-      setHorror(ogHorror);
-    };
-    getHorror();
+    fetchComedy();
   }, []);
 
   return (
@@ -56,7 +73,7 @@ function Body() {
         <div className="conatiner">
           <h3 className="heading">Netflix Orginals</h3>
           <div className="row">
-            {orginals.results.map((el) => {
+            {orginals.map((el) => {
               return (
                 <img
                   src={`${POSTER_URL}${el.backdrop_path}`}
@@ -67,9 +84,9 @@ function Body() {
             })}
           </div>
 
-          <h3 className="heading">Now Trending</h3>
+          <h3 className="heading">Netflix Trending</h3>
           <div className="row">
-            {trending.results.map((el) => {
+            {trending.map((el) => {
               return (
                 <img
                   src={`${POSTER_URL}${el.backdrop_path}`}
@@ -80,11 +97,9 @@ function Body() {
             })}
           </div>
 
-          {/* rated */}
-
-          <h3 className="heading">Top rated</h3>
+          <h3 className="heading">Netflix Romance</h3>
           <div className="row">
-            {rated.results.map((el) => {
+            {romance.map((el) => {
               return (
                 <img
                   src={`${POSTER_URL}${el.backdrop_path}`}
@@ -95,9 +110,9 @@ function Body() {
             })}
           </div>
 
-          <h3 className="heading">Horror</h3>
+          <h3 className="heading">Netflix Horror movies</h3>
           <div className="row">
-            {horror.results.map((el) => {
+            {Comedy.map((el) => {
               return (
                 <img
                   src={`${POSTER_URL}${el.backdrop_path}`}
