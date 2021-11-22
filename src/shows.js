@@ -11,5 +11,6 @@ const shows = {
   fetchRomanceMovies: `${def}/discover/movie?api_key=${API_KEY}&with_genres=10749`,
   fetchDocumentaries: `${def}/discover/movie?api_key=${API_KEY}&with_genres=99`,
 };
+console.log(shows.fetchNetflixOriginals);
 export default shows;
 // https://api.themoviedb.org/3/trending/all/week?api_key=19f8f3e02fa68353637a692eddb62840&language=en-US

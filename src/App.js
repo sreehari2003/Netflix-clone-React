@@ -1,12 +1,11 @@
 import Home from "./components/Home/Home";
-import Body from "./components/body/Body";
 import "./App.scss";
-
+import View from "./pages/View";
 function App() {
   return (
     <>
       <Home />
-      <Body />
+      <View />
     </>
   );
 }
