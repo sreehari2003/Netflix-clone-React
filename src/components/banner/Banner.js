@@ -5,12 +5,14 @@ import shows from "../../shows";
 import "./banner.scss";
 function Banner() {
   const [data, setData] = useState([]);
+    let val = Math.round(Math.random() * 10);
+
 
   useEffect(() => {
     const getData = async () => {
       const res = await fetch(shows.fetchTrending);
       const ogRes = await res.json();
-      setData(ogRes.results.slice(0, 1));
+      setData(ogRes.results.slice(val - 1, val));
     };
     getData();
   }, []);
