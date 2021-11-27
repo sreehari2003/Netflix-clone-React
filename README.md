@@ -1,8 +1,3 @@
-# NOTE
-There is still some problem with the api.it is api is not loading propely every time if you are intersted you can do pull request
-i havent handled the error in the code Yet
-
-
 
 # Getting Started with Create React App
 
