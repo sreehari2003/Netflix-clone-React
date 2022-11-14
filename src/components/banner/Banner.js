@@ -5,10 +5,9 @@ import shows from "../../shows";
 import "./banner.scss";
 function Banner() {
   const [data, setData] = useState([]);
-    let val = Math.round(Math.random() * 10);
-
 
   useEffect(() => {
+    let val = Math.round(Math.random() * 10);
     const getData = async () => {
       const res = await fetch(shows.fetchTrending);
       const ogRes = await res.json();
@@ -16,8 +15,6 @@ function Banner() {
     };
     getData();
   }, []);
-  console.log("from banner");
-  console.log(data);
   const backPath = data.map((el) => el.backdrop_path);
   const imgLink = `https://image.tmdb.org/t/p/original/${backPath}`;
   const img = {

@@ -31,6 +31,9 @@
       .icon {
         font-size: 20px;
         padding: 16px;
+        &:hover{
+          cursor: pointer;
+        }
       }
     }
     .left {
@@ -67,5 +70,19 @@
         }
       }
     }
+  }
+}
+
+.options button{
+  padding: 5px 10px;
+  border: 1px solid black;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: aliceblue;
+
+  &:hover{
+    background-color:red;
+    color:white;
   }
 }

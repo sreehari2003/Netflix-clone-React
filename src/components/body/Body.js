@@ -2,6 +2,8 @@ import React from "react";
 import "./body.scss";
 import shows from "../../shows";
 import { useState, useEffect } from "react";
+import Card from "../cards/Card";
+
 function Body() {
   const [orginals, setOrginals] = useState([]);
   const [trending, setTrending] = useState([]);
@@ -52,7 +54,6 @@ function Body() {
     fetchRomance();
   }, []);
 
-  //comdedy
   useEffect(() => {
     const fetchComedy = async () => {
       try {
@@ -120,6 +121,12 @@ function Body() {
                   className="col"
                 />
               );
+            })}
+          </div>
+          <h3 className="heading">Dummey Movies</h3>
+          <div className="row">
+            {Comedy.map((el) => {
+              return <Card image={el.backdrop_path} name={el.original_title} />;
             })}
           </div>
         </div>

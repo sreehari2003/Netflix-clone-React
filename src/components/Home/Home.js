@@ -1,16 +1,6 @@
 import React from "react";
-// import Navbar from "./Navbar/Navbar";
 import Banner from "../banner/Banner";
 
-const Home = () => {
-  return (
-    <>
-      <div>
-        {/* <Navbar /> */}
-        <Banner />
-      </div>
-    </>
-  );
-};
+const Home = () => <Banner />;
 
 export default Home;

@@ -1,11 +1,5 @@
 import React from "react";
 import Body from "../components/body/Body";
-const View = () => {
-  return (
-    <>
-      <Body />
-    </>
-  );
-};
+const View = () => <Body />;
 
 export default View;

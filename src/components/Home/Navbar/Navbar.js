@@ -40,8 +40,9 @@ function Navbar() {
             <div className="profile">
               <AiOutlineArrowDown className="icon" />
               <div className="options">
-                <span>Settings</span>
-                <span>Layout</span>
+                <button>My List</button>
+                <button>Settings</button>
+                <button>Logout</button>
               </div>
             </div>
           </div>

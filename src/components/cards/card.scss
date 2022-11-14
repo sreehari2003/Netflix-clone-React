@@ -1,0 +1,19 @@
+.card_main {
+  padding-right: 5px;
+  width: 100%;
+  background-color: red;
+  height: 20vh;
+  object-fit: contain;
+  transition: all 0.2s;
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+.card{
+  width: 300px;
+
+}
+h4{
+ padding: 10px;
+}
